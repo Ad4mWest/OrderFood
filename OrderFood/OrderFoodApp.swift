@@ -12,6 +12,7 @@ struct OrderFoodApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
         }
     }
 }
