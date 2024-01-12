@@ -11,6 +11,12 @@
 		667BC1AE2B51C2A0003B0830 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BC1AD2B51C2A0003B0830 /* ContentView.swift */; };
 		667BC1B02B51C2A1003B0830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 667BC1AF2B51C2A1003B0830 /* Assets.xcassets */; };
 		667BC1B32B51C2A1003B0830 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 667BC1B22B51C2A1003B0830 /* Preview Assets.xcassets */; };
+		667BC1BA2B51C5AF003B0830 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BC1B92B51C5AF003B0830 /* AppetizerListView.swift */; };
+		667BC1BC2B51C5C0003B0830 /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BC1BB2B51C5C0003B0830 /* AppetizerListViewModel.swift */; };
+		667BC1BE2B51C5C5003B0830 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BC1BD2B51C5C5003B0830 /* AccountView.swift */; };
+		667BC1C02B51C5CD003B0830 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BC1BF2B51C5CD003B0830 /* OrderView.swift */; };
+		667BC1C22B51C5D2003B0830 /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BC1C12B51C5D2003B0830 /* Appetizer.swift */; };
+		667BC1C42B51C5D6003B0830 /* AppetizerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BC1C32B51C5D6003B0830 /* AppetizerListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		667BC1AD2B51C2A0003B0830 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		667BC1AF2B51C2A1003B0830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		667BC1B22B51C2A1003B0830 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		667BC1B92B51C5AF003B0830 /* AppetizerListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppetizerListView.swift; sourceTree = "<group>"; };
+		667BC1BB2B51C5C0003B0830 /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
+		667BC1BD2B51C5C5003B0830 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		667BC1BF2B51C5CD003B0830 /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		667BC1C12B51C5D2003B0830 /* Appetizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
+		667BC1C32B51C5D6003B0830 /* AppetizerListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppetizerListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 			isa = PBXGroup;
 			children = (
 				667BC1B22B51C2A1003B0830 /* Preview Assets.xcassets */,
+				667BC1B92B51C5AF003B0830 /* AppetizerListView.swift */,
+				667BC1BB2B51C5C0003B0830 /* AppetizerListViewModel.swift */,
+				667BC1BD2B51C5C5003B0830 /* AccountView.swift */,
+				667BC1BF2B51C5CD003B0830 /* OrderView.swift */,
+				667BC1C12B51C5D2003B0830 /* Appetizer.swift */,
+				667BC1C32B51C5D6003B0830 /* AppetizerListCell.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -139,6 +157,12 @@
 			files = (
 				667BC1AE2B51C2A0003B0830 /* ContentView.swift in Sources */,
 				667BC1AC2B51C2A0003B0830 /* OrderFoodApp.swift in Sources */,
+				667BC1C42B51C5D6003B0830 /* AppetizerListCell.swift in Sources */,
+				667BC1BA2B51C5AF003B0830 /* AppetizerListView.swift in Sources */,
+				667BC1C02B51C5CD003B0830 /* OrderView.swift in Sources */,
+				667BC1C22B51C5D2003B0830 /* Appetizer.swift in Sources */,
+				667BC1BC2B51C5C0003B0830 /* AppetizerListViewModel.swift in Sources */,
+				667BC1BE2B51C5C5003B0830 /* AccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
