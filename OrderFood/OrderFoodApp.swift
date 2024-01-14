@@ -11,8 +11,7 @@ import SwiftUI
 struct OrderFoodApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-            
+            AppatizerTabView()
         }
     }
 }
