@@ -1,9 +1,6 @@
-//
 //  APError.swift
 //  Appotizers
-//
 //  Created by Adam West on 11.01.2024.
-//
 
 import Foundation
 

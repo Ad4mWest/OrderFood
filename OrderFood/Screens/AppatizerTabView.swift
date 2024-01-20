@@ -1,9 +1,6 @@
-//
 //  ContentView.swift
 //  Appotizers
-//
 //  Created by Adam West on 11.01.2024.
-//
 
 import SwiftUI
 
@@ -26,7 +23,7 @@ struct AppatizerTabView: View {
                     Text("Order")
                 }
         }
-        .tint(Color.brandP) // color of tab item
+        .tint(Color.brandP) 
     }
 }
 

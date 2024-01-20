@@ -1,12 +1,8 @@
-//
 //  NetworkManager.swift
 //  Appotizers
-//
 //  Created by Adam West on 11.01.2024.
-//
 
 import UIKit
-import Combine
 
 final class NetworkManager {
     static let shared = NetworkManager()
@@ -76,21 +72,3 @@ final class NetworkManager {
     }
 }
 
-//var storage = Set<AnyCancellable>()
-
-
-//let task = URLSession.shared.dataTaskPublisher(for: URLRequest(url: url))
-//   
-//task
-//    .map(\.data)
-//    .decode(type: Appetizer.self, decoder: JSONDecoder())
-//    .receive(on: DispatchQueue.main)
-//    .sink { completion in
-//        switch completion {
-//        case .finished:
-//            print(completion)
-//        case .failure(let error):
-//            assertionFailure(error.localizedDescription)
-//        }
-//    } receiveValue: { print($0) }
-//    .store(in: &storage)

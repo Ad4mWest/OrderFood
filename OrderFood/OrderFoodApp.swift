@@ -1,9 +1,6 @@
-//
 //  OrderFoodApp.swift
 //  OrderFood
-//
 //  Created by Adam West on 12.01.2024.
-//
 
 import SwiftUI
 

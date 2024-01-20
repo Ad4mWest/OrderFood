@@ -1,9 +1,6 @@
-//
 //  XDismissButton.swift
 //  OrderFood
-//
 //  Created by Adam West on 13.01.2024.
-//
 
 import SwiftUI
 
