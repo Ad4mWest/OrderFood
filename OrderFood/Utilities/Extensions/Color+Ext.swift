@@ -1,5 +1,5 @@
-//  Color + Ext.swift
-//  Appotizers
+//  Color+Ext.swift
+//  OrderFood
 //  Created by Adam West on 11.01.2024.
 
 import SwiftUI

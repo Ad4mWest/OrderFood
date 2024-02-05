@@ -5,10 +5,12 @@
 import SwiftUI
 
 final class AccountViewModel: ObservableObject {
+    // MARK: Public Properties
     @AppStorage("user") private var userData: Data?
     @Published var user: User = User()
     @Published var alertItem: AlertItem?
     
+    // MARK: Public methods
     func saveChanges() {
         guard isValidForm else {
             return
@@ -34,13 +36,19 @@ final class AccountViewModel: ObservableObject {
             alertItem = AlertContext.invalidUserData
         }
     }
-    
+}
+
+// MARK: - Validation
+extension AccountViewModel {
     var isValidForm: Bool {
-        guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty else {
+        guard
+            user.firstName.isNotEmpty &&
+            user.lastName.isNotEmpty &&
+            user.email.isNotEmpty
+        else {
             alertItem = AlertContext.invalidForm
             return false
         }
-        
         guard user.email.isValidEmail else {
             alertItem = AlertContext.invalidEmail
             return false

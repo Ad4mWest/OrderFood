@@ -1,10 +1,10 @@
-//  Appetizer.swift
-//  Cards
+//  OrderFood.swift
+//  OrderFood
 //  Created by Adam West on 11.01.2024.
 
 import Foundation
 
-struct Appetizer: Decodable, Identifiable {
+struct OrderFood: Decodable, Identifiable {
     let id: Int
     let name: String
     let description: String
@@ -15,14 +15,16 @@ struct Appetizer: Decodable, Identifiable {
     let carbs: Int
 }
 
-struct AppetizerResponse: Decodable {
-    let request: [Appetizer]
+// MARK: - Response
+struct OrderFoodResponse: Decodable {
+    let request: [OrderFood]
 }
 
+// MARK: - MockData
 struct MockData {
-    static let sampleAppetizer = Appetizer(
+    static let sampleOrderFood = OrderFood(
         id: 0001,
-        name: "Test Appetizer",
+        name: "Test Order",
         description: "This is a decription",
         price: 9.99,
         imageURL: "",
@@ -30,9 +32,9 @@ struct MockData {
         protein: 20,
         carbs: 60)
     
-    static let sampleAppetizerTwo = Appetizer(
+    static let sampleOrderFoodTwo = OrderFood(
         id: 0001,
-        name: "Test Appetizer",
+        name: "Test Order",
         description: "This is a decription",
         price: 9.99,
         imageURL: "",
@@ -40,9 +42,9 @@ struct MockData {
         protein: 20,
         carbs: 60)
     
-    static let sampleAppetizerThree = Appetizer(
+    static let sampleOrderFoodThree = OrderFood(
         id: 0001,
-        name: "Test Appetizer",
+        name: "Test Order",
         description: "This is a decription",
         price: 9.99,
         imageURL: "",
@@ -50,5 +52,9 @@ struct MockData {
         protein: 20,
         carbs: 60)
     
-    static let appetizers = [sampleAppetizer,sampleAppetizerTwo,sampleAppetizerThree]
+    static let orderFoods = [
+        sampleOrderFood,
+        sampleOrderFoodTwo,
+        sampleOrderFoodThree
+    ]
 }

@@ -5,14 +5,15 @@
 import SwiftUI
 
 struct EmptyState: View {
+    // MARK: Public Properties
     let imageName: String
     let message: String
     
+    // MARK: Lifecycle
     var body: some View {
         ZStack {
             Color(.systemBackground)
-                .edgesIgnoringSafeArea(.all)
-            
+                .ignoresSafeArea()
             VStack {
                 Image(imageName)
                     .resizable()
@@ -30,5 +31,8 @@ struct EmptyState: View {
 }
 
 #Preview {
-    EmptyState(imageName: "empty-order", message: "Text")
+    EmptyState(
+        imageName: "empty-order",
+        message: "Text"
+    )
 }

@@ -6,8 +6,10 @@ import SwiftUI
 
 @main
 struct OrderFoodApp: App {
+    // MARK: Public Properties
     var order = Order()
     
+    // MARK: Lifecycle
     var body: some Scene {
         WindowGroup {
             AppatizerTabView().environmentObject(order)

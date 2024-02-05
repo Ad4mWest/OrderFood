@@ -1,21 +1,19 @@
-//
 //  Order.swift
 //  OrderFood
-//
 //  Created by Adam West on 24.01.2024.
-//
 
 import SwiftUI
 
 final class Order: ObservableObject {
-    @Published var items: [Appetizer] = []
-    
+    // MARK: Public Properties
+    @Published var items: [OrderFood] = []
     var totalPrice: Double {
         items.reduce(0) { $0 + $1.price }
     }
     
-    func add(_ appetizer: Appetizer) {
-        items.append(appetizer)
+    // MARK: Public methods
+    func add(_ order: OrderFood) {
+        items.append(order)
     }
     
     func deleteItems(at offsets: IndexSet) {

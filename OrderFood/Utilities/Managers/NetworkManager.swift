@@ -1,49 +1,34 @@
 //  NetworkManager.swift
-//  Appotizers
+//  OrderFood
 //  Created by Adam West on 11.01.2024.
 
 import UIKit
 
 final class NetworkManager {
+    // MARK: Public Properties
     static let shared = NetworkManager()
-    private let cache = NSCache<NSString, UIImage>()
-    
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
-    private let appetizerURL = baseURL + "appetizers"
     
+    // MARK: Private properties
+    private let cache = NSCache<NSString, UIImage>()
+    private let orderFoodURL = baseURL + "appetizers"
     
+    // MARK: Initialization
     private init() {}
     
-    func getAppetizers(completed: @escaping (Result<[Appetizer], APError>) -> Void) {
-        guard let url = URL(string: appetizerURL) else {
-            completed(.failure(APError.invalidURL))
-            return
+    // MARK: Public methods
+    func getOrderFoods() async throws -> [OrderFood] {
+        guard let url = URL(string: orderFoodURL) else {
+            throw APError.invalidURL
         }
+        let (data, _) = try await URLSession.shared.data(from: url)
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
-            if let _ = error {
-                completed(.failure(APError.unableToComplete))
-                return
-            }
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(APError.invalidResponse))
-                return
-            }
-            guard let data = data else {
-                completed(.failure(APError.invalidData))
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let decodedResponse = try decoder.decode(AppetizerResponse.self, from: data)
-                completed(.success(decodedResponse.request))
-            } catch {
-                completed(.failure(APError.invalidData))
-            }
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(OrderFoodResponse.self, from: data).request
+        } catch {
+            throw APError.invalidData
         }
-        
-        task.resume()
     }
     
     func downloadImage(fromURLString urlString: String, completed: @escaping(UIImage?) -> Void) {
@@ -59,8 +44,10 @@ final class NetworkManager {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
-            guard let data = data, let image = UIImage(data: data) else {
+        let task = URLSession.shared.dataTask(
+            with: URLRequest(url: url)
+        ) { data, response, error in
+            guard let data, let image = UIImage(data: data) else {
                 completed(nil)
                 return
             }
