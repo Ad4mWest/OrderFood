@@ -8,6 +8,9 @@ struct OrderView: View {
     // MARK: Public Properties
     @EnvironmentObject var order: Order
     
+    // MARK: Private properties
+    @State private var isPresentedAlert = false
+    
     // MARK: Lifecycle
     var body: some View {
         NavigationView {
@@ -23,7 +26,8 @@ struct OrderView: View {
                     }
                     .listStyle(PlainListStyle())
                     Button("$\(order.totalPrice, specifier: "%.2f") - Pay") {
-                        print("Payed")
+                        order.items = []
+                        isPresentedAlert.toggle()
                     }
                     .modifier(StandartButtonStyle())
                     .padding(.bottom, 25)
@@ -37,6 +41,15 @@ struct OrderView: View {
             }
             .navigationTitle("🐗 Orders")
         }
+        .alert(
+            isPresented: $isPresentedAlert,
+            content: {
+                Alert(
+                    title: Text("Your order payed!"),
+                    dismissButton: .default(Text("Ok"))
+                )
+            }
+        )
     }
 }
 
